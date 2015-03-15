@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="X-Cubed : Carey Bishop">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title>X-Cubed</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/x-cubed">View on GitHub</a>
+
+          <h1 id="project_title">X-Cubed</h1>
+          <h2 id="project_tagline">Carey Bishop</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<img src="logos/growl-72.png" align="left" alt="Growl Logo"/>
+<a id="growlforandroid" class="anchor" href="#growlforandroid" aria-hidden="true"><span class="octicon octicon-link"></span></a>Growl for Android</h2>
+
+ <h3><a name="Required_Components"></a>Required Components<a href="#Required_Components" class="section_anchor"></a></h3><ul><li><a href="http://developer.android.com/sdk/index.html" rel="nofollow">The Android SDK</a> </li><li><a href="http://www.eclipse.org/downloads/" rel="nofollow">Eclipse</a> </li><li><a href="http://developer.android.com/sdk/eclipse-adt.html" rel="nofollow">Android Development Tools (ADT) for Eclipse</a> </li><li>Git</li></ul>
+ 
+ <h3><a name="Getting_Started"></a>Getting Started<a href="#Getting_Started" class="section_anchor"></a></h3><ul><li>Install the above components according to their respective instructions. </li><li>Make sure you install the SDK Platform Android 2.0 package in the Android SDK Manager. </li><li>Create an Android 2.0 virtual device in the Android SDK Manager. </li><li><a href="https://github.com/x-cubed/growlforandroid" rel="nofollow">Check out</a> the source code. </li><blockquote>The main code is in <tt>GrowlForAndroid/</tt> so check this folder out into your Eclipse workspace. On Windows, your workspace folder will by default be <tt>%USERPROFILE%\workspace</tt>. 
+</blockquote><li>Upon checking out the code, start up Eclipse. If the <tt>GrowlForAndroid</tt> project doesn't appear in the Package Explorer, choose <strong>File -&gt; Refresh</strong> to update your workspace. </li><li>You should now be able to run the application on the virtual device by clicking the Debug button in Eclipse and choosing to run the project as an Android Application. </li></ul>
+
+<h3><a name="Sending_GNTP_Notifications_to_the_Emulator"></a>Sending GNTP Notifications to the Emulator<a href="#Sending_GNTP_Notifications_to_the_Emulator" class="section_anchor"></a></h3><p>  </p><ul><li>Make sure that you don't have Growl running on your development machine. </li><li>Open a command prompt, navigate to the Android SDK tools directory and run: </li><blockquote><tt>adb forward tcp:23053 tcp:23053</tt> 
+</blockquote></ul><p></p><blockquote>to forward TCP connections from the local machine to the emulator. 
+</blockquote><ul><li>Use GrowlNotify to send a notification by running something like: </li><blockquote><tt>growlnotify /a:applicationName /r:notificationType /n:notificationType /t:title text</tt> 
+</blockquote></ul><blockquote>You should see the message: 
+</blockquote><blockquote><i>Notification sent successfully</i> 
+</blockquote><blockquote>on the console, and the notification should appear in the status bar on the Android virtual device. 
+</blockquote><h3><a name="Note"></a>Note<a href="#Note" class="section_anchor"></a></h3><p>The Android emulator will only accept connections from the local machine, not from the network. If you wish to test network notifications, you'll need to use a TCP proxy such as  <a href="http://aluigi.altervista.org/mytoolz.htm" rel="nofollow">Simple TCP proxy/datapipe 0.4.6a (stcpipe)</a> to listen on a local port and forward the connections to the port used by the emulator. </p>
+
+ 
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+
